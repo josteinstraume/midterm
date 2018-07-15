@@ -1,7 +1,7 @@
 // Source:
 // https://www.youtube.com/watch?v=17WoOqgXsRM
 // https://cs.brynmawr.edu/gxk2013/examples/transformations/starfield/
-class Star {
+class Star extends GameObject {
   // Star coordinates in 3D
   float x;
   float y;
@@ -11,6 +11,9 @@ class Star {
     x = random(-5000, 5000);
     y = random(-5000, 5000);
     z = random(0, 2000);
+    dx = 0;
+    dy = 0;
+    dz = 0;
   }
   
   void update() {
