@@ -26,7 +26,7 @@ class Ship extends GameObject{
     if (akey) dx = -5;
     if (skey) dy = 5;
     if (dkey) dx = 5;
-    //if (spacekey)
+    if (spacekey) engine.add(new Bullet());
     
     x = x + dx;
     y = y + dy;

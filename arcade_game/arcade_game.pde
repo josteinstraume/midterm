@@ -4,6 +4,7 @@ Star[] stars;
 int numStars = 400;
 ArrayList<GameObject> engine;
 boolean wkey, akey, skey, dkey, spacekey;
+Ship myShip;
 
 import processing.opengl.*;
 
@@ -16,7 +17,9 @@ void setup() {
   ss.addStar();
   engine = new ArrayList<GameObject>(10000); // Arbitrary number of objects to create
   rectMode(CENTER);
-  engine.add(new Ship());
+  //engine.add(new Ship());
+  myShip = new Ship();
+  engine.add(myShip);
 }
 
 void draw() {
