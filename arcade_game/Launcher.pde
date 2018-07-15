@@ -46,6 +46,7 @@ class Launcher extends GameObject {
   
   void randomWave() {
     x = random(50, width - 50);
+    y = random(50, height - 50);
     if (frameCount % 100 == 0) {
       engine.add(new Enemy(x, y, z));
     }
