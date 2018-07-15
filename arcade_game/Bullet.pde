@@ -1,10 +1,11 @@
+// Source:
+// https://www.youtube.com/watch?v=VBDDsRFzR1E
 class Bullet extends GameObject {
   
   Bullet() {
     x = myShip.x;
     y = myShip.y;
     z = myShip.z;
-    println(myShip.x, myShip.y, myShip.z);
     dx = 0;
     dy = 0;
     dz = -10;

@@ -1,10 +1,18 @@
+color lightblue = #67D4FF;
+color darkblue = #2F6A96;
+color orange = #EE7036;
+
+Ship myShip;
 StarSystem ss;
 Star star;
 Star[] stars;
+
 int numStars = 400;
+int timer = 0;
 ArrayList<GameObject> engine;
 boolean wkey, akey, skey, dkey, spacekey;
-Ship myShip;
+
+
 
 import processing.opengl.*;
 
@@ -20,12 +28,15 @@ void setup() {
   //engine.add(new Ship());
   myShip = new Ship();
   engine.add(myShip);
+  engine.add(new Launcher());
 }
 
 void draw() {
   background(0);
+  pushMatrix();
   translate(0.5*width, 0.5*height);
   ss.run();
+  popMatrix();
   
   int i = engine.size() - 1;
   while (i >= 0) {
@@ -37,6 +48,8 @@ void draw() {
     }
     i--;
   }
+  
+  
 }
 
 void keyPressed() {

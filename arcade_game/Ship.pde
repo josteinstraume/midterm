@@ -12,9 +12,11 @@ class Ship extends GameObject{
   }
   
   void show() {
-     fill(250, 240, 142);
-     translate(x, y, z);
-     box(100);
+    pushMatrix();
+    fill(250, 240, 142);
+    translate(x, y, z);
+    box(25);
+    popMatrix();
   }
 
   void act() {
@@ -26,7 +28,7 @@ class Ship extends GameObject{
     if (akey) dx = -5;
     if (skey) dy = 5;
     if (dkey) dx = 5;
-    if (spacekey) engine.add(new Bullet());
+    if (spacekey & frameCount % 10 == 0) engine.add(new Bullet());
     
     x = x + dx;
     y = y + dy;
