@@ -42,6 +42,17 @@ class Enemy extends GameObject {
           }
         }
       }
+      // Make damage particles for ship
+      if (thing instanceof Ship) {
+        if (recRect(x, y, z, 40, 40, thing.x, thing.y, thing.z, 25, 25)) {
+          hp -= 1;
+          thing.hp -= 1;
+          for (int j = 0; j < 5; j++) {
+            engine.add(new Particle(thing.x, thing.y, thing.z));
+          //engine.add(new Particle(thing.x, thing.y, thingz));
+          }          
+        }
+      } 
       i++;
     }
     

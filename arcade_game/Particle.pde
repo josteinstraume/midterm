@@ -15,7 +15,7 @@ class Particle extends GameObject {
   void show() {
     pushMatrix();
     translate(x, y, z);
-    fill(orange, hp);
+    fill(fireenginered, hp);
     box(3);
     popMatrix();
   }

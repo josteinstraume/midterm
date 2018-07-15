@@ -14,6 +14,7 @@ color spacecadet = #1D2951; // https://rgbcolorcode.com/color/space-cadet
 color electricgreen = #00E600;
 color outerspace = #414A4C;
 color deepspacesparkle = #4A646C;
+color fireenginered = #CE2029;
 
 Ship myShip;
 StarSystem ss;
