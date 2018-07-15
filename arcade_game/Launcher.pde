@@ -30,7 +30,9 @@ class Launcher extends GameObject {
     } else if (frameCount < 1500) {
       //doubleLine();
       randomWave();
-    } 
+    } else {
+      randomWave();
+    }
   }
   
   void straightLine(float incomingX) {

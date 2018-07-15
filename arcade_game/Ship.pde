@@ -13,7 +13,9 @@ class Ship extends GameObject{
   
   void show() {
     pushMatrix();
-    fill(250, 240, 142);
+    //fill(250, 240, 142);
+    //fill(electricgreen);
+    fill(spacecadet);
     translate(x, y, z);
     box(25);
     popMatrix();

@@ -1,6 +1,19 @@
+/*
+ MSDS 6390 Assignment 8: Midterm
+ Arcade Game- Space Shooter
+ Team: Jostein Barry-Straume, Brian Yu
+ Date: 07/13/18
+ Sources:
+ https://www.youtube.com/watch?v=MJh3blPxcQw
+ */
+ 
 color lightblue = #67D4FF;
 color darkblue = #2F6A96;
 color orange = #EE7036;
+color spacecadet = #1D2951; // https://rgbcolorcode.com/color/space-cadet
+color electricgreen = #00E600;
+color outerspace = #414A4C;
+color deepspacesparkle = #4A646C;
 
 Ship myShip;
 StarSystem ss;
@@ -19,8 +32,8 @@ import processing.opengl.*;
 void setup() {
   size(600, 600, P3D);
   smooth();
-  stroke(255);
-  strokeWeight(5);
+  stroke(0);
+  strokeWeight(1);
   ss = new StarSystem();
   ss.addStar();
   engine = new ArrayList<GameObject>(10000); // Arbitrary number of objects to create
@@ -32,7 +45,8 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+  lights();
+  background(outerspace);
   pushMatrix();
   translate(0.5*width, 0.5*height);
   ss.run();

@@ -9,12 +9,14 @@ class Bullet extends GameObject {
     dx = 0;
     dy = 0;
     dz = -10;
+    hp = 1;
   }
   
   void show() {
     pushMatrix();
     translate(x, y, z);
-    fill(250, 240, 142);
+    //fill(250, 240, 142);
+    fill(electricgreen);
     box(5);
     popMatrix();
   }
@@ -26,6 +28,6 @@ class Bullet extends GameObject {
   }
   
   boolean hasDied() {
-    return z < -10000;
+    return z < -10000 || hp <= 0;
   }
 }
