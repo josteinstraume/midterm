@@ -5,7 +5,7 @@ class Ship extends GameObject{
   Ship() {
     x = width/2;
     y = width/2;
-    z = 0;
+    z = width/2;
     dx = 0;
     dy = 0;
     dz = 0;
@@ -27,10 +27,13 @@ class Ship extends GameObject{
     dy = 0;
     dz = 0;
     
-    if (wkey) dy = -5;
-    if (akey) dx = -5;
-    if (skey) dy = 5;
-    if (dkey) dx = 5;
+    if (wkey) dy = -5;  // Up
+    if (skey) dy = 5;   // Down
+    if (akey) dx = -5;  // Left
+    if (dkey) dx = 5;   // Right
+    if (ekey) dz = -5;  // Forward
+    if (qkey) dz = 5;   // Backward
+    
     if (spacekey & frameCount % 10 == 0) engine.add(new Bullet());
     
     x = x + dx;

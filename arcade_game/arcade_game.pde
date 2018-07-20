@@ -24,7 +24,7 @@ Star[] stars;
 int numStars = 400;
 int timer = 0;
 ArrayList<GameObject> engine;
-boolean wkey, akey, skey, dkey, spacekey;
+boolean wkey, akey, skey, dkey, qkey, ekey, spacekey;
 
 
 
@@ -72,6 +72,8 @@ void keyPressed() {
   if (key == 'a' || key == 'A') akey = true;
   if (key == 's' || key == 'S') skey = true;
   if (key == 'd' || key == 'D') dkey = true;
+  if (key == 'q' || key == 'Q') qkey = true;
+  if (key == 'e' || key == 'E') ekey = true;
   if (key == ' ') spacekey = true;
   
 }
@@ -84,5 +86,7 @@ void keyReleased() {
   if (key == 'a' || key == 'A') akey = false;
   if (key == 's' || key == 'S') skey = false;
   if (key == 'd' || key == 'D') dkey = false;
+  if (key == 'q' || key == 'Q') qkey = false;
+  if (key == 'e' || key == 'E') ekey = false;
   if (key == ' ') spacekey = false;
 }
