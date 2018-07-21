@@ -60,7 +60,13 @@ class Enemy extends GameObject {
   }
   
   boolean hasDied() {
-    return dz > 100 || hp <= 0;
+    if (dz > 100 || hp <= 0) {
+      engine.add(new Message("+10", x, y, z, 10));
+      return true;
+    } else {
+      return false;
+    }
+//    return dz > 100 || hp <= 0;
   }
   
 }

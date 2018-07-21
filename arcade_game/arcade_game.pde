@@ -23,6 +23,7 @@ Star[] stars;
 
 int numStars = 400;
 int timer = 0;
+float size = 20;
 ArrayList<GameObject> engine;
 boolean wkey, akey, skey, dkey, qkey, ekey, spacekey;
 
@@ -31,6 +32,7 @@ boolean wkey, akey, skey, dkey, qkey, ekey, spacekey;
 import processing.opengl.*;
 
 void setup() {
+  textAlign(CENTER);
   size(600, 600, P3D);
   smooth();
   stroke(0);
